@@ -11,26 +11,26 @@
 	"xigouandgouzao.h"
 	"dijsktra.h"
 
-1483945960 c:\users\jangshin\desktop\computerinternet\class.h
+1483947710 c:\users\jangshin\desktop\computerinternet\class.h
 	<iostream>
 
-1483946721 c:\users\jangshin\desktop\computerinternet\hanshu1.h
-	<iostream>
-	"class.h"
-
-1483945918 c:\users\jangshin\desktop\computerinternet\hanshu2.h
+1483947690 c:\users\jangshin\desktop\computerinternet\hanshu1.h
 	<iostream>
 	"class.h"
 
-1483946193 c:\users\jangshin\desktop\computerinternet\hanshu3.h
+1483947690 c:\users\jangshin\desktop\computerinternet\hanshu2.h
 	<iostream>
 	"class.h"
 
-1483946295 c:\users\jangshin\desktop\computerinternet\xigouandgouzao.h
+1483947720 c:\users\jangshin\desktop\computerinternet\hanshu3.h
 	<iostream>
 	"class.h"
 
-1483945918 c:\users\jangshin\desktop\computerinternet\dijsktra.h
+1483947690 c:\users\jangshin\desktop\computerinternet\xigouandgouzao.h
+	<iostream>
+	"class.h"
+
+1483947690 c:\users\jangshin\desktop\computerinternet\dijsktra.h
 	<iostream>
 	"class.h"
 

@@ -3,7 +3,6 @@
 #include <iostream>
 #include "class.h"
 using namespace std;
-
 bool CreatNet::InsertRoute(const char *name,string A)      //´´½¨Õ¾µã
 {
     if(Num==NumRoute)

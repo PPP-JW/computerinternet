@@ -12,7 +12,7 @@ using namespace std;
 int main( )
 {
     char ch;
-    CreatNet X;
+    CreatNet  X;
     X.ReadRoute();
     X.ReadNet();
     cout<<"已构建路由网络图："<<endl;
