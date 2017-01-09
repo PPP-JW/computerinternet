@@ -34,38 +34,14 @@
 	<iostream>
 	"class.h"
 
-1483947504 source:c:\users\yinyin\desktop\computerinternet\main.cpp
+1483945550 source:c:\users\yinyin\desktop\computerinternet\main.cpp
 	<iostream>
 	<cstring>
 	<string>
 	<stdio.h>
 	<fstream>
-	"hanshu1.h"
-	"hanshu2.h"
-	"hanshu3.h"
-	"xigouandgouzao.h"
-	"dijsktra.h"
-
-1483947504 c:\users\yinyin\desktop\computerinternet\class.h
-	<iostream>
-
-1483947504 c:\users\yinyin\desktop\computerinternet\hanshu1.h
-	<iostream>
 	"class.h"
 
-1483947504 c:\users\yinyin\desktop\computerinternet\hanshu2.h
+1483945550 c:\users\yinyin\desktop\computerinternet\class.h
 	<iostream>
-	"class.h"
-
-1483947504 c:\users\yinyin\desktop\computerinternet\hanshu3.h
-	<iostream>
-	"class.h"
-
-1483947504 c:\users\yinyin\desktop\computerinternet\xigouandgouzao.h
-	<iostream>
-	"class.h"
-
-1483947504 c:\users\yinyin\desktop\computerinternet\dijsktra.h
-	<iostream>
-	"class.h"
 
