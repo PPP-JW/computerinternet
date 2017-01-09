@@ -3,21 +3,18 @@
 #include <iostream>
 using namespace std;
 const int NumRoute=100;
-template <class T,class E>
 struct RouteNet     //作为边表结点
 {
     int dest;
-    T dis;
-    RouteNet<T,E> *Link;
+    int dis;
+    RouteNet *Link;
 };
-template <class T,class E>
 struct RouteList      //顶点表结点
 {
-    E *Routename;
+    char *Routename;
     string Netname;
-    RouteNet<T,E> *next;
+    RouteNet *next;
 };
-template <class T,class E>
 class CreatNet
 {
 public:
@@ -27,13 +24,13 @@ public:
     void ReadNet();
     void Printf();                       //测试函数，输出数值
     void Print();              //测试函数，输出数值
-    bool InsertRoute(const E *Routename,string A);     //增添站点
-    bool InsertLine(char *a,char *b,T d);  //增设路线
+    bool InsertRoute(const char *Routename,string A);     //增添站点
+    bool InsertLine(char *a,char *b,int d);  //增设路线
     bool DeleteLine(char *a,char *b);
     bool DeleteRoute(char *a);
     bool IsNear(int a,int b)
     {
-        RouteNet<T,E> *p=head[a].next;
+        RouteNet *p=head[a].next;
         while(p!=NULL)
         {
             if(p->dest==b)
@@ -44,10 +41,10 @@ public:
         return false;
     }
     int FindAddr(char*a);
-    T getWeight(char*a,char*b);
+    int getWeight(char*a,char*b);
     void ShortminPath(char*v, int distance[], int minPath[]);
     void create_RouteTable(int path[],char*m);
-    E* GetValue(E *i)//返回站点i的值
+    char* GetValue(char *i)//返回站点i的值
     {
         if(i==NULL)
         {
@@ -57,10 +54,9 @@ public:
             return i;
     }
 protected:
-    RouteNet<T,E> *ptr;
-    RouteList<T,E> *head;
-    T Num=0;
-    T NumLine=0;
-    E x=1;
+    RouteNet *ptr;
+    RouteList *head;
+    int Num=0;
+    int NumLine=0;
 };
 #endif // CLASS_H_INCLUDED

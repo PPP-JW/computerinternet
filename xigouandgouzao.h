@@ -2,23 +2,22 @@
 #define XIGOUANDGOUZAO_H_INCLUDED
 #include <iostream>
 #include "class.h"
+const int Maxsize=20;
 using namespace std;
-template <class T,class E>
-CreatNet<T,E>::~CreatNet()
+CreatNet::~CreatNet()
 {
     for(int i=0; i<Num; i++)
         delete []head;
 }
-template <class T,class E>
-CreatNet<T,E>::CreatNet(int sz)            //构造函数
+CreatNet::CreatNet(int sz)            //构造函数
 {
-    head=new RouteList<T,E>[sz];
+    head=new RouteList[sz];
     for(int i=0; i<sz; i++)
     {
-        head[i].Routename=new E[Maxsize];
+        head[i].Routename=new char[Maxsize];
         head[i].next=NULL;
     }
-    ptr=new RouteNet<T,E>;
+    ptr=new RouteNet;
     ptr->Link=NULL;
 }
 #endif // XIGOUANDGOUZAO_H_INCLUDED

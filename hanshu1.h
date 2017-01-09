@@ -2,10 +2,9 @@
 #define HANSHU1_H_INCLUDED
 #include <iostream>
 #include "class.h"
-#include "main.cpp"
 using namespace std;
-template <class T,class E>
-bool CreatNet<T,E>::InsertRoute(const E *name,string A)      //´´½¨Õ¾µã
+
+bool CreatNet::InsertRoute(const char *name,string A)      //´´½¨Õ¾µã
 {
     if(Num==NumRoute)
         return false;
@@ -15,8 +14,7 @@ bool CreatNet<T,E>::InsertRoute(const E *name,string A)      //´´½¨Õ¾µã
     Num++;
     return true;
 }
-template <class T,class E>
-int CreatNet<T,E>::FindAddr(char*a)
+int CreatNet::FindAddr(char*a)
 {
     int i=0;
     for(i=0; i<Num; i++)
@@ -26,14 +24,13 @@ int CreatNet<T,E>::FindAddr(char*a)
     }
     return -1;
 }
-template <class T,class E>
-bool CreatNet<T,E>::DeleteRoute(char *a)           //É¾³ıÕ¾µã
+bool CreatNet::DeleteRoute(char *a)           //É¾³ıÕ¾µã
 {
     int v;
     v=FindAddr(a);
     if(Num==1||v<0||v>NumRoute)
         return false;
-    RouteNet<T,E> *p,*s,*t;
+    RouteNet *p,*s,*t;
     int k;
     while(head[v].next!=NULL)
     {
@@ -80,17 +77,16 @@ bool CreatNet<T,E>::DeleteRoute(char *a)           //É¾³ıÕ¾µã
      Num--;
     return true;
 }
-template <class T,class E>
-bool CreatNet<T,E>::DeleteLine(char *a,char *b)     //É¾³ı¶¥µã±ß£¨Ä£ÄâÈ¡ÏûÁ½Õ¾µãÍ¨³µÂ·Ïß£©
+bool CreatNet::DeleteLine(char *a,char *b)     //É¾³ı¶¥µã±ß£¨Ä£ÄâÈ¡ÏûÁ½Õ¾µãÍ¨³µÂ·Ïß£©
 {
     int j,i;
     j=FindAddr(a);
     i=FindAddr(b);
     if(i!=-1&&j!=-1)
     {
-        RouteNet<T,E> *p=head[j].next;
-        RouteNet<T,E> *q=NULL;
-        RouteNet<T,E> *s=p;
+        RouteNet *p=head[j].next;
+        RouteNet *q=NULL;
+        RouteNet *s=p;
         while(p!=NULL&&p->dest!=i)
         {
             q=p;
@@ -123,8 +119,7 @@ bool CreatNet<T,E>::DeleteLine(char *a,char *b)     //É¾³ı¶¥µã±ß£¨Ä£ÄâÈ¡ÏûÁ½Õ¾µã
     }
     return false;
 }
-template <class T,class E>
-bool CreatNet<T,E>::InsertLine(char *a,char *b,T d)     //½¨Á¢ÁÚ½Ó±í(Ä£Äâ´´½¨¸÷µØÍ¨³µÇé¿ö)
+bool CreatNet::InsertLine(char *a,char *b,int d)     //½¨Á¢ÁÚ½Ó±í(Ä£Äâ´´½¨¸÷µØÍ¨³µÇé¿ö)
 {
     int j=0;
     int i=0;
@@ -132,16 +127,16 @@ bool CreatNet<T,E>::InsertLine(char *a,char *b,T d)     //½¨Á¢ÁÚ½Ó±í(Ä£Äâ´´½¨¸÷µ
     i=FindAddr(b);
     if(j>=0&&j<Num&&i>=0&&i<Num)
     {
-        RouteNet<T,E> *q;
-        RouteNet<T,E> *p=head[j].next;
+        RouteNet *q;
+        RouteNet *p=head[j].next;
         while(p!=NULL&&p->dest!=i)
         {
             p=p->Link;
         }
         if(p!=NULL)
             return false;
-        p=new RouteNet<T,E>;
-        q=new RouteNet<T,E>;
+        p=new RouteNet;
+        q=new RouteNet;
         p->dis=d;
         p->dest=i;
         p->Link=head[j].next;

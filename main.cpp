@@ -3,14 +3,16 @@
 #include <string>
 #include <stdio.h>
 #include <fstream>
-#include "class.h"
+#include "hanshu1.h"
+#include "hanshu2.h"
+#include "hanshu3.h"
+#include "xigouandgouzao.h"
+#include "dijsktra.h"
 using namespace std;
-const int Maxsize=20;
-const int maxValue=1000;
-int main()
+int main( )
 {
     char ch;
-    CreatNet<int,char>  X;
+    CreatNet X;
     X.ReadRoute();
     X.ReadNet();
     cout<<"已构建路由网络图："<<endl;
@@ -125,4 +127,5 @@ int main()
             }
         }
     }
+    return 0;
 }

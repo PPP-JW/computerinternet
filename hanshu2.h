@@ -3,8 +3,7 @@
 #include <iostream>
 #include "class.h"
 using namespace std;
-template<class T,class E>
-void CreatNet<T,E>::create_RouteTable(int path[],char*m)
+void CreatNet::create_RouteTable(int path[],char*m)
 {
     int v=FindAddr(m);
     int j=0,k=0;

@@ -2,8 +2,7 @@
 #define DIJSKTRA_H_INCLUDED
 #include <iostream>
 #include "class.h"
-template<class T, class E>
-void CreatNet<T,E>::ShortminPath(char*v, int distance[], int minPath[])
+void CreatNet::ShortminPath(char*v, int distance[], int minPath[])
 {
     int n =Num;	//¶¥µã¸öÊý
     bool *S = new bool[n];

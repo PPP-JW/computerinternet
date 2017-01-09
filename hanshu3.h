@@ -2,11 +2,11 @@
 #define HANSHU3_H_INCLUDED
 #include <iostream>
 #include "class.h"
+const int maxValue=1000;
 using namespace std;
-template <class T,class E>
-void CreatNet<T,E>::Print()
+void CreatNet::Print()
 {
-    RouteNet<T,E> *p;
+    RouteNet *p;
     cout<<"Â·ÓÉÆ÷    ÍøÂçºÅ  ÏàÁÚÂ·ÓÉÆ÷  dest  ¾àÀë"<<endl;
     for(int i=0; i<Num; i++)
     {
@@ -19,8 +19,7 @@ void CreatNet<T,E>::Print()
         }
     }
 }
-template <class T,class E>
-void CreatNet<T,E>::ReadRoute()
+void CreatNet::ReadRoute()
 {
     char *cho="end";
     ifstream infile;
@@ -36,8 +35,7 @@ void CreatNet<T,E>::ReadRoute()
     }
     infile.close();
 }
-template <class T,class E>
-void CreatNet<T,E>::ReadNet()
+void CreatNet::ReadNet()
 {
     char *cho="end";
     char data1[10],data2[10];
@@ -58,14 +56,13 @@ void CreatNet<T,E>::ReadNet()
     }
     infile.close();
 }
-template<class T,class E>
-T CreatNet<T,E>::getWeight(char*a,char*b)
+int CreatNet::getWeight(char*a,char*b)
 {
     int i=FindAddr(a);
     int j=FindAddr(b);
     if(i!=-1&&j!=-1)
     {
-        RouteNet<T,E>*p=head[i].next;
+        RouteNet *p=head[i].next;
         while(p!=NULL&&p->dest!=j)
         {
             p=p->Link;
