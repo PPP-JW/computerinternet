@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1483944803 source:c:\users\jangshin\desktop\computerinternet\main.cpp
+	<iostream>
+	<cstring>
+	<string>
+	<stdio.h>
+	<fstream>
+	"class.h"
+
+1483944803 c:\users\jangshin\desktop\computerinternet\class.h
+	<iostream>
+
