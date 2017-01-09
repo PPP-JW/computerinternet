@@ -17,6 +17,7 @@ int main( )
     X.ReadNet();
     cout<<"已构建路由网络图："<<endl;
     X.Print();
+    cout<<"我在更新数据！！！"<<endl;
     while(ch!='F'||ch!='f')
     {
         cout<<"************************************"<<endl;
